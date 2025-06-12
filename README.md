@@ -34,7 +34,7 @@ Este projeto tem como objetivo desenvolver um sistema de banco de dados para ger
 </table>
 
 <br>
-## 💻 Tecnologias Utilizadas
 
+## 💻 Tecnologias Utilizadas
 - **Visual Paradigm** – Modelagem de banco de dados  
 - **Git & GitHub** – Controle de versão
