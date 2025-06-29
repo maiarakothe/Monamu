@@ -1,8 +1,10 @@
+CREATE database monamu;
+
 CREATE TABLE Cliente (
   codcli    SERIAL NOT NULL, 
   nomcli    varchar(80) NOT NULL, 
-  cpfcli    int4 NOT NULL UNIQUE, 
-  telcli    int4, 
+  cpfcli    varchar(11) NOT NULL UNIQUE, 
+  telcli    varchar(20), 
   emacli    varchar(80) UNIQUE, 
   ruacli    varchar(100), 
   cidcli    varchar(50) NOT NULL, 
@@ -52,13 +54,12 @@ COMMENT ON COLUMN Desconto.nomdsc IS 'Nome do Desconto (Ex. Cupom de Páscoa)';
 COMMENT ON COLUMN Desconto.valdsc IS 'Valor do Desconto em porcentagem';
 COMMENT ON COLUMN Desconto.caddsc IS 'Data de inicio da validade do Desconto';
 COMMENT ON COLUMN Desconto.vlddsc IS 'Validade do Desconto';
-
 CREATE TABLE Fornecedor (
   codfor    SERIAL NOT NULL, 
   cnpfor    varchar(14) NOT NULL UNIQUE, 
   nomempfor varchar(80) NOT NULL, 
   emafor    varchar(80) NOT NULL UNIQUE, 
-  telfor    int4 NOT NULL, 
+  telfor    varchar(20) NOT NULL, 
   ruafor    varchar(100) NOT NULL, 
   baifor    varchar(20) NOT NULL, 
   cidfor    varchar(50) NOT NULL, 
@@ -77,14 +78,16 @@ COMMENT ON COLUMN Fornecedor.cidfor IS 'Cidade do Fornecedor';
 CREATE TABLE Funcionario (
   codfun    SERIAL NOT NULL, 
   nomfun    varchar(80) NOT NULL, 
-  cpffun    int4 NOT NULL UNIQUE, 
+  cpffun    varchar(11) NOT NULL UNIQUE, 
   carfun    varchar(40) NOT NULL, 
   datadmfun timestamp NOT NULL, 
-  telfun    int4 NOT NULL, 
+  telfun    varchar(20) NOT NULL, 
   emafun    varchar(80) UNIQUE, 
   ruafun    varchar(100) NOT NULL, 
   cidfun    varchar(40) NOT NULL, 
   baifun    varchar(40) NOT NULL, 
+  logfun    varchar(40) UNIQUE, 
+  senfun    varchar(255) NOT NULL, 
   codloj    int4 NOT NULL, 
   CONSTRAINT pkey_funcionario 
     PRIMARY KEY (codfun));
@@ -99,6 +102,8 @@ COMMENT ON COLUMN Funcionario.emafun IS 'Email do Funcionario';
 COMMENT ON COLUMN Funcionario.ruafun IS 'Rua do Funcionario';
 COMMENT ON COLUMN Funcionario.cidfun IS 'Cidade onde o Funcionario reside';
 COMMENT ON COLUMN Funcionario.baifun IS 'Bairro do Funcionario';
+COMMENT ON COLUMN Funcionario.logfun IS 'Login do funcionário';
+COMMENT ON COLUMN Funcionario.senfun IS 'Senha do funcionário';
 
 CREATE TABLE item_condicional (
   coditecon SERIAL NOT NULL, 
@@ -131,7 +136,7 @@ CREATE TABLE Loja (
   rualoj varchar(100) NOT NULL, 
   bailoj varchar(40) NOT NULL, 
   cidloj varchar(40) NOT NULL, 
-  telloj int4 NOT NULL, 
+  telloj varchar(20) NOT NULL, 
   cnploj varchar(14) NOT NULL UNIQUE, 
   CONSTRAINT pkey_loja 
     PRIMARY KEY (codloj));
@@ -154,6 +159,8 @@ CREATE TABLE Produto (
   vendpro   numeric(4, 2) NOT NULL, 
   qtdestpro int4 NOT NULL, 
   datcadpro timestamp NOT NULL, 
+  despro    text, 
+  atipro    bool DEFAULT 'TRUE' NOT NULL CHECK(atipro in (TRUE, FALSE)), 
   codfor    int4 NOT NULL, 
   codloj    int4 NOT NULL, 
   CONSTRAINT pkey_produto 
@@ -167,6 +174,8 @@ COMMENT ON COLUMN Produto.custpro IS 'Preço de custo do produto';
 COMMENT ON COLUMN Produto.vendpro IS 'Preço de venda do produto';
 COMMENT ON COLUMN Produto.qtdestpro IS 'Quantidade em estoque do produto';
 COMMENT ON COLUMN Produto.datcadpro IS 'Data do cadastro do produto';
+COMMENT ON COLUMN Produto.despro IS 'Descrição do produto';
+COMMENT ON COLUMN Produto.atipro IS 'TRUE: produto ativo e FALSE: produto inativo';
 
 CREATE TABLE Venda (
   codven    SERIAL NOT NULL, 
