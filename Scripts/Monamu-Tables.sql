@@ -1,5 +1,10 @@
-CREATE database monamu;
+/* Criação da Base de Dados */
 
+CREATE DATABASE monamu;
+
+----------------------------------------------------------------
+
+/* Criação das Tabelas */
 CREATE TABLE Cliente (
   codcli    SERIAL NOT NULL, 
   nomcli    varchar(80) NOT NULL, 
@@ -54,6 +59,7 @@ COMMENT ON COLUMN Desconto.nomdsc IS 'Nome do Desconto (Ex. Cupom de Páscoa)';
 COMMENT ON COLUMN Desconto.valdsc IS 'Valor do Desconto em porcentagem';
 COMMENT ON COLUMN Desconto.caddsc IS 'Data de inicio da validade do Desconto';
 COMMENT ON COLUMN Desconto.vlddsc IS 'Validade do Desconto';
+
 CREATE TABLE Fornecedor (
   codfor    SERIAL NOT NULL, 
   cnpfor    varchar(14) NOT NULL UNIQUE, 
@@ -155,8 +161,8 @@ CREATE TABLE Produto (
   tampro    varchar(10) NOT NULL, 
   corpro    varchar(40) NOT NULL, 
   tipro     varchar(40) NOT NULL, 
-  custpro   numeric(4, 2) NOT NULL, 
-  vendpro   numeric(4, 2) NOT NULL, 
+  custpro   numeric(6, 2) NOT NULL, 
+  vendpro   numeric(6, 2) NOT NULL, 
   qtdestpro int4 NOT NULL, 
   datcadpro timestamp NOT NULL, 
   despro    text, 
@@ -207,3 +213,4 @@ ALTER TABLE Produto ADD CONSTRAINT produto_codfor_fkey_001 FOREIGN KEY (codfor) 
 ALTER TABLE Produto ADD CONSTRAINT produto_coloj_fkey_002 FOREIGN KEY (codloj) REFERENCES Loja (codloj);
 ALTER TABLE Venda ADD CONSTRAINT venda_codcli_fkey_002 FOREIGN KEY (codcli) REFERENCES Cliente (codcli);
 ALTER TABLE Venda ADD CONSTRAINT venda_codfun_fkey_001 FOREIGN KEY (codfun) REFERENCES Funcionario (codfun);
+
