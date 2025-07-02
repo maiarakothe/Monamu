@@ -51,7 +51,7 @@ Este projeto tem como objetivo desenvolver um sistema de banco de dados para ger
 - `Monamu_Dicionário_de_dados.pdf`: Dicionário de dados do modelo relacional
 
 **📁 Documentos/**
-- `Monamu_Slides.pptx`: Apresentação do projeto Monamu
+- `Monamu_Slides.pdf`: Apresentação do projeto Monamu
 - `Requisitos.docx`:  Documento com os requisitos funcionais do sistema
 
 **📁 Scripts/**  
