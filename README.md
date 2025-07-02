@@ -3,23 +3,36 @@
 
 ---
 
-## 📝 Resumo do Trabalho
 
-Este projeto tem como objetivo desenvolver um sistema de banco de dados para gerenciar as operações de uma loja de roupas. O sistema permite o **cadastro e gerenciamento de produtos**, **controle de vendas e estoque**, além de **registro de clientes, funcionários e fornecedores**.
+## 📝 Objetivo
 
+Este projeto tem como objetivo desenvolver um sistema de banco de dados para gerenciar as operações de uma loja de roupas, desenvolvido como trabalho acadêmico para a disciplina de Banco de Dados I do curso de Ciência da Computação da Universidade do Oeste de Santa Catarina (UNOESC). 
 
-## 📈 Relatórios Implementados
+## ✅ Funcionalidades
 
-1. **Relatório de Produtos Disponíveis**  
+| Área         | Descrição                      |
+|--------------|----------------------------------------------------|
+| **🔄 Produtos** | Cadastro  detalhado (tipo, cor, tamanho, categoria) e ativo/inativo     |
+| **👥 Clientes** | Cadastro básico                                   |
+| **🧑‍💼 Funcionários** | Cadastro com dados pessoais, cargo e admissão      |
+| **📦 Fornecedores** | Cadastro completo                              |
+| **🛒 Vendas**   | Registro de venda e uso de cupons de descontos                  |
+| **🔁 Condicional** | Controle de retirada e devolução    |
+| **🏬 Loja**     | Cadastro básico com localização e contato.                                |
+                  
+
+##  📊 Relatórios Implementados
+
+1. **📄 Produtos Disponíveis**  
    - Lista produtos disponíveis com nome, categoria, tamanho, preço e estoque.
 
-2. **Relatório de Compras de um Cliente**  
+2. **🧾 Compras de um Cliente**  
    - Mostra as compras de um cliente com produtos e valores.
 
-3. **Relatório de Vendas por Funcionário**  
+3. **📈 Vendas por Funcionário**  
    - Lista as vendas feitas por cada funcionário dentro de um período.
 
-4. **Relatório Resumido de Vendas por Categoria**  
+4. **📂 Resumido de Vendas por Categoria**  
    - Total de vendas e valores por categoria de produto.
    
 
