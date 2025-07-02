@@ -1,4 +1,4 @@
-<h1 align="center">Monamu 👚🛍️</h1>
+<h1 align="center">👚Monamu 🛍️</h1>
 <h4 align="center"><em>Sistema de Gerenciamento de Loja de Roupas</em></h4>
 
 ---
