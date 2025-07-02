@@ -6,7 +6,7 @@
 
 ## 📝 Objetivo
 
-Este projeto tem como objetivo desenvolver um sistema de banco de dados para gerenciar as operações de uma loja de roupas, desenvolvido como trabalho acadêmico para a disciplina de Banco de Dados I do curso de Ciência da Computação da Universidade do Oeste de Santa Catarina (UNOESC). 
+Este projeto tem como objetivo desenvolver um sistema de banco de dados para gerenciar as operações de uma loja de roupas, incluindo cadastro de produtos, controle de vendas, clientes e funcionários. Foi desenvolvido como trabalho acadêmico para a disciplina de Banco de Dados I do curso de Ciência da Computação da Universidade do Oeste de Santa Catarina (UNOESC).
 
 ## ✅ Funcionalidades
 
