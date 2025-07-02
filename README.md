@@ -39,41 +39,54 @@ Este projeto tem como objetivo desenvolver um sistema de banco de dados para ger
 ## 💻 Tecnologias Utilizadas
 
 - **Linguagem SQL (PostgreSQL)** – Criação da base de dados, consultas e constraints;
-- **Visual Paradigm** – Modelagem do banco de dados (MER e Diagrama Relacional);
+- **Visual Paradigm** – Modelagem do banco de dados;
 - **DBeaver** – Execução dos scripts SQL e testes das consultas;
 - **Git e GitHub** – Controle de versão e hospedagem do repositório.
 
 
-## 🗂️ Organização do Repositório
+## 🗂️ Estrutura do Projeto
 
-```bash
-📁 Scripts/
-  ├── Monamu-Tables.sql               # Criação das tabelas, índices e constraints
-📄Monamu.vpp                         # Modelo relacional do banco de dados
-📄README.md                          # Este arquivo que você está obervando agora mesmo
-📄Requisitos.docx                    # Requisitos do projeto
-```
+**📁 Diagrama/**
+- `Monamu.vpp`: Modelo relacional do banco de dados
+- `Monamu_Dicionário_de_dados.pdf`: Dicionário de dados do modelo relacional
+
+**📁 Documentos/**
+- `Monamu_Slides.pptx`: Apresentação do projeto Monamu
+- `Requisitos.docx`:  Documento com os requisitos funcionais do sistema
+
+**📁 Scripts/**  
+  - **📁 Tabelas/**  
+    - `Monamu_Tabela_1_Produtos.png`: Imagem da consulta nos produtos disponíveis 
+    - `Monamu_Tabela_2_Cliente.png`: Imagem da consulta das compras de um cliente
+    - `Monamu_Tabela_3_Funcinario.png`: Imagem da consulta das vendas por funcionário
+    - `Monamu_Tabela_4_Tipo.png`: Imagem da consulta das vendas por categoria
+- `Monamu_Tables.sql`: Criação das tabelas, índices e constraints
+- `Monamu_Inserts.sql`: Inserções de dados nas tabelas
+- `Monamu_Consultas.sql`: Consultas e relatórios SQL
+
+**📄README.md**: Este arquivo com as informações do projeto
+
 
 ## 👨‍💻 Desenvolvedores
 
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/maiarakothe">
+      <a href="https://github.com/maiarakothe" style="text-decoration: none; color: inherit;">
         <img src="https://avatars.githubusercontent.com/u/160647563?v=4" width="115"><br>
-        <sub><strong>Maiara Braun Kothe</strong></sub>
+        <strong>Maiara Braun Kothe</strong>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/MatheusBamberg">
+      <a href="https://github.com/MatheusBamberg" style="text-decoration: none; color: inherit;">
         <img src="https://avatars.githubusercontent.com/u/204625992?v=4" width="115"><br>
-        <sub><strong>Matheus Scherer Bamberg</strong></sub>
+        <strong>Matheus Scherer Bamberg</strong>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Zilles09">
+      <a href="https://github.com/Zilles09" style="text-decoration: none; color: inherit;">
         <img src="https://avatars.githubusercontent.com/u/165856735?v=4" width="115"><br>
-        <sub><strong>Moisés Augusto Braun Zilles</strong></sub>
+        <strong>Moisés Augusto Braun Zilles</strong>
       </a>
     </td>
   </tr>
